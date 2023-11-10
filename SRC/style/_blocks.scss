@@ -1,0 +1,106 @@
+.mainmenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+
+  @media (width >= $size-lg) {
+    padding: 30px;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    > li {
+      display: inline-block;
+      list-style: none;
+      margin: 5px 5px 10px 5px;
+
+      @media (width >= $size-lg) {
+        margin: 7px;
+      }
+
+      a {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        color: $color-main;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px transparentize($color-main, 0.90);
+        border-radius: 50%;
+        text-transform: uppercase;
+        transition: 1s;
+
+        img {
+          width: 20px;
+          height: 18px;
+          transition: 0.5s;
+        }
+
+        &:hover {
+          border: solid 1px $color-blue;
+          background-color: transparentize($color-bk, 0.5);
+
+          img {
+            scale: 1.2;
+          }
+
+        }
+
+        &.mainmenu__link-me {
+
+          &:hover {
+            border: solid 1px $color-main;
+          }
+
+          &.active {
+            font-weight: 700;
+            color: $color-bk;
+            background-color: $color-yellow;
+            border: solid 1px $color-yellow;
+            cursor: default;
+            pointer-events: none;
+          }
+
+        }
+
+        &.mainmenu__link-cv,
+        &.mainmenu__link-fg {
+          color: $color-yellow;
+
+          &:hover {
+            border: solid 1px $color-yellow;
+          }
+
+        }
+
+      }
+
+      a[href^="mailto:"] {
+        width: auto;
+        padding-left: 7px;
+        padding-right: 7px;
+        border: none;
+        border-radius: 0;
+        text-transform: none;
+
+        &:hover {
+          color: $color-blue;
+          background-color: transparent;
+        }
+
+      }
+
+    }
+
+  }
+
+}

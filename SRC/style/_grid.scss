@@ -1,8 +1,87 @@
 BODY {
-	background-color: var(--color-bk);
-	color: var(--color-main);
+	background-color: $color-bk;
+	color: $color-main;
 	height: auto !important;
 	min-height: 100vh;
 	overflow: auto;
 }
+
+.container {
+	display: block;
+	height: 100%;
+
+	@media (width >= $size-lg) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		gap: 0 0;
+		scroll-snap-type: y mandatory;
+	}
+
+}
+
+.container__l {
+	position: relative;
+	height: 100vh;
+	background: $color-bk-left url("../img/bk-l.png") right center;
+	scroll-snap-align: start;
+}
+
+.container__r {
+	position: relative;
+	min-height: 100vh;
+	background: $color-bk;
+	scroll-snap-align: start;
+ }
+
+.container__bk {
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+	&.bk--l {
+		background: url("../img/me-l.png") right center no-repeat;
+		background-size: contain;
+	}
+
+	&.bk--r {
+		background: url("../img/me-r.jpg") left center no-repeat;
+		background-size: contain;
+	}
+
+}
+
+.content {
+	position: relative;
+	z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

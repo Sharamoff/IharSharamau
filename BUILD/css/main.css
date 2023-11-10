@@ -184,38 +184,24 @@ template {
   display: none;
 }
 
-:root {
-  --color-bk: #0C0C0D;
-  --color-bk-left: #1D1D1F;
-  --color-main: #FFFFFF;
-  --color-blue: #8BB3C3;
-  --color-yellow: #F1D5AB;
-  --font-family: Inter, Arial, Helvetica, sans-serif;
-  --font-size-base: 16px;
-}
-
 @font-face {
   font-family: "Inter";
-  src: url("../fonts/Inter-Light.otf");
-  src: url("../fonts/Inter-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-Light.woff") format("woff"), url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.ttf") format("truetype");
+  src: url("../fonts/Inter-Light.otf"), url("../fonts/Inter-Light.woff") format("woff"), url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.ttf") format("truetype");
   font-weight: 300;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../fonts/Inter-Regular.otf");
-  src: url("../fonts/Inter-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-Regular.woff") format("woff"), url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.ttf") format("truetype");
+  src: url("../fonts/Inter-Regular.otf"), url("../fonts/Inter-Regular.woff") format("woff"), url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../fonts/Inter-Bold.otf");
-  src: url("../fonts/Inter-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-Bold.woff") format("woff"), url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.ttf") format("truetype");
+  src: url("../fonts/Inter-Bold.otf"), url("../fonts/Inter-Bold.woff") format("woff"), url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.ttf") format("truetype");
   font-weight: 700;
 }
 @font-face {
   font-family: "League";
-  src: url("../fonts/LeagueGothic-Regular.otf");
-  src: url("../fonts/LeagueGothic-Regular?#iefix") format("embedded-opentype"), url("../fonts/LeagueGothic-Regular.woff") format("woff"), url("../fonts/LeagueGothic-Regular.woff2") format("woff2"), url("../fonts/LeagueGothic-Regular.ttf") format("truetype");
+  src: url("../fonts/LeagueGothic-Regular.otf"), url("../fonts/LeagueGothic-Regular.woff") format("woff"), url("../fonts/LeagueGothic-Regular.woff2") format("woff2"), url("../fonts/LeagueGothic-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 * {
@@ -223,16 +209,150 @@ template {
 }
 
 BODY {
-  font-family: var(--font-family);
-  font-size: var(--font-size-base);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 16px;
 }
 
 BODY {
-  background-color: var(--color-bk);
-  color: var(--color-main);
+  background-color: #0C0C0D;
+  color: #FFFFFF;
   height: auto !important;
   min-height: 100vh;
   overflow: auto;
+}
+
+.container {
+  display: block;
+  height: 100%;
+}
+@media (width >= 992px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0 0;
+    scroll-snap-type: y mandatory;
+  }
+}
+
+.container__l {
+  position: relative;
+  height: 100vh;
+  background: #1D1D1F url("../img/bk-l.png") right center;
+  scroll-snap-align: start;
+}
+
+.container__r {
+  position: relative;
+  min-height: 100vh;
+  background: #0C0C0D;
+  scroll-snap-align: start;
+}
+
+.container__bk {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.container__bk.bk--l {
+  background: url("../img/me-l.png") right center no-repeat;
+  background-size: contain;
+}
+.container__bk.bk--r {
+  background: url("../img/me-r.jpg") left center no-repeat;
+  background-size: contain;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.mainmenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+@media (width >= 992px) {
+  .mainmenu {
+    padding: 30px;
+  }
+}
+.mainmenu ul {
+  padding: 0;
+  margin: 0;
+}
+.mainmenu ul > li {
+  display: inline-block;
+  list-style: none;
+  margin: 5px 5px 10px 5px;
+}
+@media (width >= 992px) {
+  .mainmenu ul > li {
+    margin: 7px;
+  }
+}
+.mainmenu ul > li a {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  color: #FFFFFF;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  text-transform: uppercase;
+  transition: 1s;
+}
+.mainmenu ul > li a img {
+  width: 20px;
+  height: 18px;
+  transition: 0.5s;
+}
+.mainmenu ul > li a:hover {
+  border: solid 1px #8BB3C3;
+  background-color: rgba(12, 12, 13, 0.5);
+}
+.mainmenu ul > li a:hover img {
+  scale: 1.2;
+}
+.mainmenu ul > li a.mainmenu__link-me:hover {
+  border: solid 1px #FFFFFF;
+}
+.mainmenu ul > li a.mainmenu__link-me.active {
+  font-weight: 700;
+  color: #0C0C0D;
+  background-color: #F1D5AB;
+  border: solid 1px #F1D5AB;
+  cursor: default;
+  pointer-events: none;
+}
+.mainmenu ul > li a.mainmenu__link-cv, .mainmenu ul > li a.mainmenu__link-fg {
+  color: #F1D5AB;
+}
+.mainmenu ul > li a.mainmenu__link-cv:hover, .mainmenu ul > li a.mainmenu__link-fg:hover {
+  border: solid 1px #F1D5AB;
+}
+.mainmenu ul > li a[href^="mailto:"] {
+  width: auto;
+  padding-left: 7px;
+  padding-right: 7px;
+  border: none;
+  border-radius: 0;
+  text-transform: none;
+}
+.mainmenu ul > li a[href^="mailto:"]:hover {
+  color: #8BB3C3;
+  background-color: transparent;
 }
 
 :root {

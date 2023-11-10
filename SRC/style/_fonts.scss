@@ -1,40 +1,36 @@
 @font-face {
   font-family: 'Inter';
-  src: url('../fonts/Inter-Light.otf');
-  src: url('../fonts/Inter-Light.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/Inter-Light.woff') format('woff'),
-  url('../fonts/Inter-Light.woff2') format('woff2'),
-  url('../fonts/Inter-Light.ttf') format('truetype');
+  src:  url('../fonts/Inter-Light.otf'),
+        url('../fonts/Inter-Light.woff') format('woff'),
+        url('../fonts/Inter-Light.woff2') format('woff2'),
+        url('../fonts/Inter-Light.ttf') format('truetype');
   font-weight: 300;
 }
 
 @font-face {
   font-family: 'Inter';
-  src: url('../fonts/Inter-Regular.otf');
-  src: url('../fonts/Inter-Regular.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/Inter-Regular.woff') format('woff'),
-  url('../fonts/Inter-Regular.woff2') format('woff2'),
-  url('../fonts/Inter-Regular.ttf') format('truetype');
+  src:  url('../fonts/Inter-Regular.otf'),
+        url('../fonts/Inter-Regular.woff') format('woff'),
+        url('../fonts/Inter-Regular.woff2') format('woff2'),
+        url('../fonts/Inter-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Inter';
-  src: url('../fonts/Inter-Bold.otf');
-  src: url('../fonts/Inter-Bold.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/Inter-Bold.woff') format('woff'),
-  url('../fonts/Inter-Bold.woff2') format('woff2'),
-  url('../fonts/Inter-Bold.ttf') format('truetype');
+  src:  url('../fonts/Inter-Bold.otf'),
+        url('../fonts/Inter-Bold.woff') format('woff'),
+        url('../fonts/Inter-Bold.woff2') format('woff2'),
+        url('../fonts/Inter-Bold.ttf') format('truetype');
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'League';
-  src: url('../fonts/LeagueGothic-Regular.otf');
-  src: url('../fonts/LeagueGothic-Regular?#iefix') format('embedded-opentype'),
-  url('../fonts/LeagueGothic-Regular.woff') format('woff'),
-  url('../fonts/LeagueGothic-Regular.woff2') format('woff2'),
-  url('../fonts/LeagueGothic-Regular.ttf') format('truetype');
+  src:  url('../fonts/LeagueGothic-Regular.otf'),
+        url('../fonts/LeagueGothic-Regular.woff') format('woff'),
+        url('../fonts/LeagueGothic-Regular.woff2') format('woff2'),
+        url('../fonts/LeagueGothic-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 
@@ -47,8 +43,8 @@
 
 
 BODY {
-  font-family: var(--font-family);
-  font-size: var(--font-size-base);
+  font-family: $font-family;
+  font-size: $font-size-base;
 }
 
 
