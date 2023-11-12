@@ -20,18 +20,20 @@ BODY {
 
 }
 
-.container__l {
+#container__l {
 	position: relative;
 	height: 100vh;
 	background: $color-bk-left url("../img/bk-l.png") right center;
 	scroll-snap-align: start;
+	overflow: hidden;
 }
 
-.container__r {
+#container__r {
 	position: relative;
 	min-height: 100vh;
 	background: $color-bk;
 	scroll-snap-align: start;
+	overflow: hidden;
  }
 
 .container__bk {
@@ -44,11 +46,23 @@ BODY {
 	&.bk--l {
 		background: url("../img/me-l.png") right center no-repeat;
 		background-size: contain;
+
+		@media (height <= $size-sm) {
+			top: -100px;
+			height: 180%
+		}
+
 	}
 
 	&.bk--r {
 		background: url("../img/me-r.jpg") left center no-repeat;
 		background-size: contain;
+
+		@media (height <= $size-sm) {
+			top: -100px;
+			height: 180%
+		}
+
 	}
 
 }
@@ -56,13 +70,113 @@ BODY {
 .content {
 	position: relative;
 	z-index: 1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
+.l__top {
+	margin-top: 220px;
+	padding-left: 25px;
+	padding-right: 25px;
 
+	@media (width >= $size-md) {
+		width: 100%;
+		max-width: 500px;
+		padding-left: 40px;
+		padding-right: 40px;
+		margin-right: 20%;
+		margin-left: auto;
+	}
 
+	@media ( $size-lg < width < $size-xl) {
+		width: auto;
+		max-width: none;
+		margin-left: 0;
+		margin-right: 0;
+	}
 
+	@media (height <= $size-md) {
+		margin-top: 180px;
+	}
 
+	@media (height <= $size-sm) {
+		margin-top: 100px;
+		max-width: 300px;
+		margin-left: 5%;
+	}
 
+}
+
+.l__btm {
+	margin-bottom: 100px;
+	padding-left: 25px;
+	padding-right: 25px;
+
+	@media (width >= $size-md) {
+		width: 100%;
+		max-width: 500px;
+		padding-left: 40px;
+		padding-right: 40px;
+		margin-right: 20%;
+		margin-left: auto;
+	}
+
+	@media (width >= $size-xl) {
+		margin-bottom: 150px;
+	}
+
+	@media ( $size-lg < width < $size-xl) {
+		width: auto;
+		max-width: none;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	@media (height <= $size-md) {
+		margin-top: -15%;
+	}
+
+	@media (height <= $size-sm) {
+		margin-left: 45%;
+	}
+
+	@media (height <= $size-xs) {
+		margin-top: -17%;
+	}
+
+	@media (width <= $size-xs) and (height <= $size-md) {
+		margin-bottom: 60px;
+	}
+
+}
+
+.l__btndown,
+.l__btnup {
+	position: absolute;
+	width: 100%;
+	height: 32px;
+	text-align: center;
+
+	@media (width >= $size-lg) {
+		display: none;
+	}
+
+	svg {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}
+
+.l__btndown {
+	bottom: 1px;
+}
+
+.l__btnup {
+	top: 1px;
+}
 
 
 

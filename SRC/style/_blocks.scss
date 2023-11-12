@@ -7,6 +7,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
 
   @media (width >= $size-lg) {
@@ -16,11 +17,17 @@
   ul {
     padding: 0;
     margin: 0;
+    display: flex;
+    align-items: center;
 
     > li {
       display: inline-block;
       list-style: none;
       margin: 5px 5px 10px 5px;
+
+      @media (width <= $size-xs) {
+        margin: 5px;
+      }
 
       @media (width >= $size-lg) {
         margin: 7px;
@@ -36,8 +43,16 @@
         align-items: center;
         border: solid 1px transparentize($color-main, 0.90);
         border-radius: 50%;
+        font-size: 16px;
+        font-weight: 200;
         text-transform: uppercase;
+        line-height: 1;
         transition: 1s;
+
+        @media (width <= $size-xs) {
+          width: 36px;
+          height: 36px;
+        }
 
         img {
           width: 20px;
@@ -50,7 +65,7 @@
           background-color: transparentize($color-bk, 0.5);
 
           img {
-            scale: 1.2;
+            scale: 1.1;
           }
 
         }
@@ -68,6 +83,19 @@
             border: solid 1px $color-yellow;
             cursor: default;
             pointer-events: none;
+          }
+
+        }
+
+        &.mainmenu__link-back {
+
+          &:hover {
+            border: solid 1px $color-main;
+
+            img {
+              scale: 1;
+            }
+
           }
 
         }
@@ -91,6 +119,7 @@
         border: none;
         border-radius: 0;
         text-transform: none;
+        line-height: 1;
 
         &:hover {
           color: $color-blue;
@@ -101,6 +130,154 @@
 
     }
 
+  }
+
+}
+
+
+
+#id_iharsharamau {
+  max-width: 500px;
+
+  @media (height <= $size-md) {
+    max-width: 400px;
+  }
+
+}
+
+
+
+#id_speciality {
+  padding: 0;
+  margin-top: 25px;
+  margin-left: 12%;
+  font-weight: 200;
+  font-size: 20px;
+  list-style: none;
+  text-transform: uppercase;
+
+  @media (width >= $size-md) {
+    font-size: 30px;
+    margin-top: 35px;
+  }
+
+  @media (height <= $size-md) {
+    font-size: 25px;
+    margin-top: 20px;
+  }
+
+  @media (height <= $size-sm) {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  span {
+    color: $color-blue;
+  }
+
+}
+
+
+
+#id_btm-block20,
+#id_btm-block200 {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  margin-top: 30px;
+}
+
+#id_btm-block200 {
+  margin-left: 12%;
+
+  @media (height <= $size-md) {
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+
+  @media (height <= $size-xs) {
+    margin-left: 28px;
+    margin-top: 15px;
+  }
+
+}
+
+.btm-block__bignumb {
+  font-family: $font-family-big;
+  line-height: .72;
+  font-size: 90px;
+
+  @media (width >= $size-md) {
+    font-size: 120px;
+  }
+
+  @media (height <= $size-md) {
+    font-size: 90px;
+  }
+
+  @media (height <= $size-xs) {
+    font-size: 80px;
+  }
+
+}
+
+.btm-block__plus {
+  width: 30px;
+  height: 30px;
+  margin-left: -1px;
+  margin-top: 1%;
+  align-self: flex-start;
+
+  @media (width >= $size-md) {
+    width: 36px;
+    height: 36px;
+  }
+
+  @media (height <= $size-md) {
+    width: 30px;
+    height: 30px;
+  }
+
+}
+
+.btm-block__descript {
+  font-size: 16px;
+  font-weight: 200;
+  text-transform: uppercase;
+  line-height: 1.11;
+  color: $color-yellow;
+  margin-left: 5px;
+
+  @media (width >= $size-md) {
+    font-size: 20px;
+  }
+
+  @media (height <= $size-md) {
+    font-size: 16px;
+  }
+
+  @media (height <= $size-xs) {
+    font-size: 14px;
+  }
+
+  div:nth-child(1) {
+    font-size: 125%;
+    color: $color-main;
+  }
+
+}
+
+.l__copy {
+  display: none;
+
+  @media (width >= $size-lg) {
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    left: 10px;
+    bottom: 10px;
+    font-size: 10px;
+    color: #666666;
   }
 
 }
