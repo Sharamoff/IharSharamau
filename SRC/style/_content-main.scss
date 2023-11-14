@@ -1,0 +1,214 @@
+#container-main .content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main__top {
+  margin-top: 220px;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  @media (width >= $size-md) {
+    width: 100%;
+    max-width: 500px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-right: 20%;
+    margin-left: auto;
+  }
+
+  @media ( $size-lg < width < $size-xl) {
+    width: auto;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media (height <= $size-md) {
+    margin-top: 180px;
+  }
+
+  @media (height <= $size-sm) {
+    margin-top: 100px;
+    max-width: 300px;
+    margin-left: 5%;
+  }
+
+}
+
+.main__btm {
+  margin-bottom: 100px;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  @media (width >= $size-md) {
+    width: 100%;
+    max-width: 500px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-right: 20%;
+    margin-left: auto;
+  }
+
+  @media (width >= $size-xl) {
+    margin-bottom: 150px;
+  }
+
+  @media ( $size-lg < width < $size-xl) {
+    width: auto;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media (height <= $size-md) {
+    margin-top: -15%;
+  }
+
+  @media (height <= $size-sm) {
+    margin-left: 45%;
+  }
+
+  @media (height <= $size-xs) {
+    margin-top: -17%;
+  }
+
+  @media (width <= $size-xs) and (height <= $size-md) {
+    margin-bottom: 60px;
+  }
+
+}
+
+
+
+#id_iharsharamau {
+  max-width: 500px;
+
+  @media (height <= $size-md) {
+    max-width: 400px;
+  }
+
+}
+
+#id_speciality {
+  padding: 0;
+  margin-top: 25px;
+  margin-left: 12%;
+  font-weight: 200;
+  font-size: 20px;
+  list-style: none;
+  text-transform: uppercase;
+
+  @media (width >= $size-md) {
+    font-size: 30px;
+    margin-top: 35px;
+  }
+
+  @media (height <= $size-md) {
+    font-size: 25px;
+    margin-top: 20px;
+  }
+
+  @media (height <= $size-sm) {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  span {
+    color: $color-blue;
+  }
+
+}
+
+#id_btm-block20,
+#id_btm-block200 {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  margin-top: 30px;
+}
+
+#id_btm-block200 {
+  margin-left: 12%;
+
+  @media (height <= $size-md) {
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+
+  @media (height <= $size-xs) {
+    margin-left: 28px;
+    margin-top: 15px;
+  }
+
+}
+
+.btm-block__bignumb {
+  font-family: $font-family-big;
+  line-height: .72;
+  font-size: 90px;
+
+  @media (width >= $size-md) {
+    font-size: 120px;
+  }
+
+  @media (height <= $size-md) {
+    font-size: 90px;
+  }
+
+  @media (height <= $size-xs) {
+    font-size: 80px;
+  }
+
+}
+
+.btm-block__plus {
+  width: 30px;
+  height: 30px;
+  margin-left: -1px;
+  margin-top: 1%;
+  align-self: flex-start;
+
+  @media (width >= $size-md) {
+    width: 36px;
+    height: 36px;
+  }
+
+  @media (height <= $size-md) {
+    width: 30px;
+    height: 30px;
+  }
+
+}
+
+.btm-block__descript {
+  font-size: 16px;
+  font-weight: 200;
+  text-transform: uppercase;
+  line-height: 1.11;
+  color: $color-yellow;
+  margin-left: 5px;
+
+  @media (width >= $size-md) {
+    font-size: 20px;
+  }
+
+  @media (height <= $size-md) {
+    font-size: 16px;
+  }
+
+  @media (height <= $size-xs) {
+    font-size: 14px;
+  }
+
+  div:nth-child(1) {
+    font-size: 125%;
+    color: $color-main;
+  }
+
+}
+

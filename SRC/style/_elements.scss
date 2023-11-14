@@ -1,15 +1,61 @@
 .c--white {
-  color: $color-main;
-  fill: $color-main;
+  color: $color-main !important;
+  fill: $color-main !important;
+}
+
+.c--black {
+  color: $color-bk-main !important;
+  fill: $color-bk-main !important;
 }
 
 .c--blue {
-  color: $color-blue;
-  fill: $color-blue;
+  color: $color-blue !important;
+  fill: $color-blue !important;
 }
 
 .c--yellow {
-  color: $color-yellow;
-  fill: $color-yellow;
+  color: $color-yellow !important;
+  fill: $color-yellow !important;
 }
 
+.pagebtn-down,
+.pagebtn-up {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 32px;
+  text-align: center;
+
+  @media (width >= $size-lg) {
+    display: none;
+  }
+
+  svg {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+.pagebtn-down {
+  bottom: 1px;
+}
+
+.pagebtn-up {
+  top: 1px;
+}
+
+.copy {
+  display: none;
+
+  @media (width >= $size-lg) {
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    left: 10px;
+    bottom: 10px;
+    font-size: 10px;
+    color: #666666;
+  }
+
+}
