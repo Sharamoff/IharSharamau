@@ -471,97 +471,92 @@ BODY {
 }
 
 .main__top {
-  margin-top: 220px;
+  margin-top: 20vh;
   padding-left: 25px;
   padding-right: 25px;
+  z-index: 1;
 }
 @media (width >= 768px) {
   .main__top {
     width: 100%;
     max-width: 500px;
+    min-width: 350px;
+    margin-left: auto;
+    margin-right: 10vw;
     padding-left: 40px;
     padding-right: 40px;
-    margin-right: 20%;
-    margin-left: auto;
   }
 }
 @media (992px < width < 1200px) {
   .main__top {
-    width: auto;
-    max-width: none;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-@media (height <= 768px) {
-  .main__top {
-    margin-top: 180px;
+    max-width: 420px;
   }
 }
 @media (height <= 576px) {
   .main__top {
-    margin-top: 100px;
-    max-width: 300px;
-    margin-left: 5%;
+    margin-top: 25vh;
+    max-width: 350px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (width <= 768px) and (height <= 576px) {
+  .main__top {
+    margin-top: 45vh;
+    max-width: 200px;
   }
 }
 
 .main__btm {
-  margin-bottom: 100px;
+  margin-bottom: 10vh;
   padding-left: 25px;
   padding-right: 25px;
+  z-index: 2;
+  /*
+    @media (height <= $size-md) {
+      margin-top: -15%;
+    }
+
+    @media (height <= $size-sm) {
+      margin-left: 45%;
+    }
+
+    @media (height <= $size-xs) {
+      margin-top: -17%;
+    }
+
+    @media (width <= $size-xs) and (height <= $size-md) {
+      margin-bottom: 60px;
+    }
+
+   */
 }
 @media (width >= 768px) {
   .main__btm {
     width: 100%;
     max-width: 500px;
+    margin-left: auto;
+    margin-right: 10vw;
     padding-left: 40px;
     padding-right: 40px;
-    margin-right: 20%;
-    margin-left: auto;
-  }
-}
-@media (width >= 1200px) {
-  .main__btm {
-    margin-bottom: 150px;
-  }
-}
-@media (992px < width < 1200px) {
-  .main__btm {
-    width: auto;
-    max-width: none;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-@media (height <= 768px) {
-  .main__btm {
-    margin-top: -15%;
   }
 }
 @media (height <= 576px) {
   .main__btm {
-    margin-left: 45%;
+    margin-top: -100vh;
+    margin-left: auto;
+    margin-right: -20vw;
   }
 }
-@media (height <= 375px) {
+@media (width <= 768px) and (height <= 576px) {
   .main__btm {
-    margin-top: -17%;
-  }
-}
-@media (width <= 375px) and (height <= 768px) {
-  .main__btm {
-    margin-bottom: 60px;
+    display: none;
   }
 }
 
 #id_iharsharamau {
+  width: 100%;
   max-width: 500px;
-}
-@media (height <= 768px) {
-  #id_iharsharamau {
-    max-width: 400px;
-  }
 }
 
 #id_speciality {
@@ -641,6 +636,7 @@ BODY {
 }
 
 .btm-block__plus {
+  display: block;
   width: 30px;
   height: 30px;
   margin-left: -1px;

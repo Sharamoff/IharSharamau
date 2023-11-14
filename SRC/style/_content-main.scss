@@ -8,63 +8,65 @@
 }
 
 .main__top {
-  margin-top: 220px;
+  margin-top: 20vh;
   padding-left: 25px;
   padding-right: 25px;
+  z-index: 1;
 
   @media (width >= $size-md) {
     width: 100%;
     max-width: 500px;
+    min-width: 350px;
+    margin-left: auto;
+    margin-right: 10vw;
     padding-left: 40px;
     padding-right: 40px;
-    margin-right: 20%;
-    margin-left: auto;
   }
 
-  @media ( $size-lg < width < $size-xl) {
-    width: auto;
-    max-width: none;
+  @media ($size-lg < width < $size-xl) {
+    max-width: 420px;
+  }
+
+  @media (height <= $size-sm) {
+    margin-top: 25vh;
+    max-width: 350px;
     margin-left: 0;
     margin-right: 0;
   }
 
-  @media (height <= $size-md) {
-    margin-top: 180px;
-  }
-
-  @media (height <= $size-sm) {
-    margin-top: 100px;
-    max-width: 300px;
-    margin-left: 5%;
+  @media (width <= $size-md) and (height <= $size-sm) {
+    margin-top: 45vh;
+    max-width: 200px;
   }
 
 }
 
 .main__btm {
-  margin-bottom: 100px;
+  margin-bottom: 10vh;
   padding-left: 25px;
   padding-right: 25px;
+  z-index: 2;
 
   @media (width >= $size-md) {
     width: 100%;
     max-width: 500px;
+    margin-left: auto;
+    margin-right: 10vw;
     padding-left: 40px;
     padding-right: 40px;
-    margin-right: 20%;
+  }
+
+  @media (height <= $size-sm) {
+    margin-top: -100vh;
     margin-left: auto;
+    margin-right: -20vw;
   }
 
-  @media (width >= $size-xl) {
-    margin-bottom: 150px;
+  @media (width <= $size-md) and (height <= $size-sm) {
+    display: none;
   }
 
-  @media ( $size-lg < width < $size-xl) {
-    width: auto;
-    max-width: none;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
+/*
   @media (height <= $size-md) {
     margin-top: -15%;
   }
@@ -81,17 +83,15 @@
     margin-bottom: 60px;
   }
 
+ */
+
 }
 
 
 
 #id_iharsharamau {
+  width: 100%;
   max-width: 500px;
-
-  @media (height <= $size-md) {
-    max-width: 400px;
-  }
-
 }
 
 #id_speciality {
@@ -167,6 +167,7 @@
 }
 
 .btm-block__plus {
+  display: block;
   width: 30px;
   height: 30px;
   margin-left: -1px;
