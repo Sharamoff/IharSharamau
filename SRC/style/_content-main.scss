@@ -28,15 +28,19 @@
   }
 
   @media (height <= $size-sm) {
-    margin-top: 25vh;
+    margin-top: 150px;
     max-width: 350px;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 10vw;
+    margin-right: auto;
   }
 
   @media (width <= $size-md) and (height <= $size-sm) {
     margin-top: 45vh;
     max-width: 200px;
+  }
+
+  @media (width >= $size-md) and (height <= $size-sm) {
+    margin-top: 130px;
   }
 
 }
@@ -57,33 +61,8 @@
   }
 
   @media (height <= $size-sm) {
-    margin-top: -100vh;
-    margin-left: auto;
-    margin-right: -20vw;
-  }
-
-  @media (width <= $size-md) and (height <= $size-sm) {
     display: none;
   }
-
-/*
-  @media (height <= $size-md) {
-    margin-top: -15%;
-  }
-
-  @media (height <= $size-sm) {
-    margin-left: 45%;
-  }
-
-  @media (height <= $size-xs) {
-    margin-top: -17%;
-  }
-
-  @media (width <= $size-xs) and (height <= $size-md) {
-    margin-bottom: 60px;
-  }
-
- */
 
 }
 

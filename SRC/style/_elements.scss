@@ -21,8 +21,9 @@
 .pagebtn-down,
 .pagebtn-up {
   position: absolute;
-  z-index: 3;
-  width: 100%;
+  z-index: 5;
+  left: 0;
+  right: 0;
   height: 32px;
   text-align: center;
 

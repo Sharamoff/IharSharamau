@@ -243,6 +243,12 @@ BODY {
   scroll-snap-align: start;
   overflow: hidden;
 }
+@media (height <= 576px) {
+  #container-main {
+    min-height: 100vh;
+    height: auto;
+  }
+}
 
 #container-projects {
   position: relative;
@@ -255,10 +261,21 @@ BODY {
 #container-me {
   position: relative;
   z-index: 1;
-  height: 100vh;
+  min-height: 100vh;
   background: #0C0C0D;
   scroll-snap-align: start;
   overflow: hidden;
+}
+@media (width >= 768px) {
+  #container-me {
+    height: 100vh;
+  }
+}
+@media (height <= 576px) {
+  #container-me {
+    min-height: 100vh;
+    height: auto;
+  }
 }
 
 .container__bk {
@@ -312,8 +329,9 @@ BODY {
 .pagebtn-down,
 .pagebtn-up {
   position: absolute;
-  z-index: 3;
-  width: 100%;
+  z-index: 5;
+  left: 0;
+  right: 0;
   height: 32px;
   text-align: center;
 }
@@ -494,10 +512,10 @@ BODY {
 }
 @media (height <= 576px) {
   .main__top {
-    margin-top: 25vh;
+    margin-top: 150px;
     max-width: 350px;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 10vw;
+    margin-right: auto;
   }
 }
 @media (width <= 768px) and (height <= 576px) {
@@ -506,30 +524,17 @@ BODY {
     max-width: 200px;
   }
 }
+@media (width >= 768px) and (height <= 576px) {
+  .main__top {
+    margin-top: 130px;
+  }
+}
 
 .main__btm {
   margin-bottom: 10vh;
   padding-left: 25px;
   padding-right: 25px;
   z-index: 2;
-  /*
-    @media (height <= $size-md) {
-      margin-top: -15%;
-    }
-
-    @media (height <= $size-sm) {
-      margin-left: 45%;
-    }
-
-    @media (height <= $size-xs) {
-      margin-top: -17%;
-    }
-
-    @media (width <= $size-xs) and (height <= $size-md) {
-      margin-bottom: 60px;
-    }
-
-   */
 }
 @media (width >= 768px) {
   .main__btm {
@@ -542,13 +547,6 @@ BODY {
   }
 }
 @media (height <= 576px) {
-  .main__btm {
-    margin-top: -100vh;
-    margin-left: auto;
-    margin-right: -20vw;
-  }
-}
-@media (width <= 768px) and (height <= 576px) {
   .main__btm {
     display: none;
   }
@@ -860,10 +858,54 @@ BODY {
 #container-me .content {
   position: relative;
   z-index: 1;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin: 50px 0 50px 25px;
+}
+@media (width >= 768px) {
+  #container-me .content {
+    margin: 10vh 0 10vh 10vw;
+  }
+}
+#container-me .content .me-header {
+  margin: 0 25px 1rem 0;
+  line-height: 1;
+  font-family: League, "Arial Narrow", Helvetica, sans-serif;
+  font-size: 100px;
+}
+@media (width >= 768px) {
+  #container-me .content .me-header {
+    font-size: 120px;
+  }
+}
+#container-me .content .me-content {
+  position: relative;
+  margin-left: 70px;
+  padding-right: 25px;
+  font-size: 14px;
+  font-weight: 200;
+  overflow-y: auto;
+}
+@media (width >= 768px) {
+  #container-me .content .me-content {
+    margin-left: 85px;
+    padding-right: 50px;
+    font-size: 16px;
+    height: 65vh;
+  }
+}
+@media (height <= 576px) {
+  #container-me .content .me-content {
+    height: auto;
+  }
+}
+#container-me .content p {
+  line-height: 1.44;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+#container-me .content .me-signature {
+  max-width: 160px;
+  height: auto;
+  margin: -20px 0 0 100px;
 }
 
 :root {
