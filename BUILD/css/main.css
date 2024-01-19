@@ -185,32 +185,32 @@ template {
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-ExtraLight.otf"), url("../fonts/Inter-ExtraLight.woff") format("woff"), url("../fonts/Inter-ExtraLight.woff2") format("woff2"), url("../fonts/Inter-ExtraLight.ttf") format("truetype");
-  font-weight: 200;
-}
-@font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Regular.otf"), url("../fonts/Inter-Regular.woff") format("woff"), url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.ttf") format("truetype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Bold.otf"), url("../fonts/Inter-Bold.woff") format("woff"), url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.ttf") format("truetype");
-  font-weight: 700;
-}
-@font-face {
   font-family: "League";
   src: url("../fonts/LeagueGothic-Regular.otf"), url("../fonts/LeagueGothic-Regular.woff") format("woff"), url("../fonts/LeagueGothic-Regular.woff2") format("woff2"), url("../fonts/LeagueGothic-Regular.ttf") format("truetype");
   font-weight: 400;
 }
+@font-face {
+  font-family: "Bliss Pro";
+  src: url("BlissPro-ExtraLight.eot");
+  src: local("Bliss Pro ExtraLight"), local("BlissPro-ExtraLight"), url("BlissPro-ExtraLight.eot?#iefix") format("embedded-opentype"), url("BlissPro-ExtraLight.woff") format("woff"), url("BlissPro-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bliss Pro";
+  src: url("BlissPro-Light.eot");
+  src: local("Bliss Pro Light"), local("BlissPro-Light"), url("BlissPro-Light.eot?#iefix") format("embedded-opentype"), url("BlissPro-Light.woff") format("woff"), url("BlissPro-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
 * {
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
 }
 
 BODY {
-  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-family: "Bliss Pro", Arial, Helvetica, sans-serif;
   font-size: 16px;
+  font-weight: 300;
 }
 
 BODY {
@@ -238,15 +238,15 @@ BODY {
 #container-main {
   position: relative;
   z-index: 1;
-  height: 100vh;
+  min-height: 100dvh;
+  height: auto;
   background: #1D1D1F url("../img/bk-main.png") right center;
   scroll-snap-align: start;
   overflow: hidden;
 }
-@media (height <= 576px) {
+@media (height >= 576px) {
   #container-main {
-    min-height: 100vh;
-    height: auto;
+    height: 100dvh;
   }
 }
 
@@ -365,7 +365,7 @@ BODY {
     z-index: 1;
     left: 10px;
     bottom: 10px;
-    font-size: 10px;
+    font-size: 12px;
     color: #666666;
   }
 }
@@ -419,7 +419,6 @@ BODY {
   border: solid 1px rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   font-size: 16px;
-  font-weight: 200;
   text-transform: uppercase;
   line-height: 1;
   transition: 1s;
@@ -446,7 +445,6 @@ BODY {
   border: solid 1px #FFFFFF;
 }
 .mainmenu ul > li a.mainmenu__link-me.active {
-  font-weight: 700;
   color: #0C0C0D;
   background-color: #F1D5AB;
   border: solid 1px #F1D5AB;
@@ -561,7 +559,6 @@ BODY {
   padding: 0;
   margin-top: 25px;
   margin-left: 12%;
-  font-weight: 200;
   font-size: 20px;
   list-style: none;
   text-transform: uppercase;
@@ -637,8 +634,8 @@ BODY {
   display: block;
   width: 30px;
   height: 30px;
-  margin-left: -1px;
-  margin-top: 1%;
+  margin-left: -3px;
+  margin-top: 2%;
   align-self: flex-start;
 }
 @media (width >= 768px) {
@@ -656,7 +653,6 @@ BODY {
 
 .btm-block__descript {
   font-size: 16px;
-  font-weight: 200;
   text-transform: uppercase;
   line-height: 1.11;
   color: #F1D5AB;
@@ -684,17 +680,16 @@ BODY {
 
 #container-projects .content {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(9, 1fr);
   gap: 0;
   min-height: 100vh;
   grid-auto-flow: row;
 }
 @media (width >= 576px) {
   #container-projects .content {
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
   }
 }
 
@@ -706,133 +701,186 @@ BODY {
   text-decoration: none;
   color: #FFFFFF;
   padding: 20px;
+  overflow: hidden;
   transition: 1s;
 }
 .project img {
   width: 100%;
   max-width: 250px;
   height: auto;
+  max-height: 100px;
   transition: 1s;
 }
 @media (width >= 768px) {
   .project img {
     max-width: 300px;
+    max-height: 130px;
+  }
+}
+@media (height <= 768px) {
+  .project img {
+    max-height: 100px;
   }
 }
 .project:hover img {
   scale: 1.06;
 }
 .project:hover .pr-title {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 #project__pr1 {
-  grid-area: 1/1/2/5;
-  background: #1D1D1F url("../img/lbk-gutewetter1.svg") 50% 50%;
-  background-size: cover;
+  grid-area: 1/1/2/3;
 }
+
+#project__pr2 {
+  grid-area: 2/1/3/3;
+}
+
+#project__pr3 {
+  grid-area: 3/1/4/3;
+}
+
+#project__pr4 {
+  grid-area: 4/1/5/3;
+}
+
+#project__pr5 {
+  grid-area: 5/1/6/3;
+}
+
+#project__pr6 {
+  grid-area: 6/1/7/3;
+}
+
+#project__pr7 {
+  grid-area: 7/1/8/3;
+}
+
+#project__pr8 {
+  grid-area: 8/1/9/2;
+}
+
+#project__pr9 {
+  grid-area: 8/2/9/3;
+}
+
+#project__pr10 {
+  grid-area: 9/1/10/2;
+}
+
+#project__pr11 {
+  grid-area: 9/2/10/3;
+}
+
 @media (width >= 576px) {
   #project__pr1 {
     grid-area: 1/1/2/3;
   }
-}
-
-#project__pr2 {
-  grid-area: 2/1/3/5;
-  background-color: #DDDDDD;
-}
-@media (width >= 576px) {
   #project__pr2 {
     grid-area: 1/3/2/5;
   }
-}
-#project__pr2 .pr-title {
-  color: #000000;
-  opacity: 0.75;
-}
-
-#project__pr3 {
-  grid-area: 3/1/4/5;
-  background: #932057 url("../img/lbk-cryptosimple.jpg") 50% 50%;
-  background-size: cover;
-}
-@media (width >= 576px) {
   #project__pr3 {
     grid-area: 2/1/3/5;
   }
+  #project__pr4 {
+    grid-area: 3/1/4/3;
+  }
+  #project__pr5 {
+    grid-area: 3/3/4/5;
+  }
+  #project__pr6 {
+    grid-area: 4/1/5/3;
+  }
+  #project__pr7 {
+    grid-area: 4/3/5/5;
+  }
+  #project__pr8 {
+    grid-area: 5/1/6/2;
+  }
+  #project__pr9 {
+    grid-area: 5/2/6/3;
+  }
+  #project__pr10 {
+    grid-area: 5/3/6/4;
+  }
+  #project__pr11 {
+    grid-area: 5/4/6/5;
+  }
+}
+#project__pr1 {
+  background: #1D1D1F url("../img/lbk-gutewetter1.svg") 50% 50%;
+  background-size: cover;
+}
+
+#project__pr2 {
+  background-color: #DDDDDD;
+}
+#project__pr2 .pr-title {
+  color: #000000;
+  opacity: 0.66;
+}
+
+#project__pr3 {
+  background: #932057 url("../img/lbk-cryptosimple.jpg") 50% 50%;
+  background-size: cover;
 }
 
 #project__pr4 {
-  grid-area: 4/1/5/5;
-  background: #000000 url("../img/lbk-mechanization1.png") 50% -40% repeat-x;
+  background: #ffffff;
 }
-@media (width >= 576px) {
-  #project__pr4 {
-    grid-area: 3/1/4/3;
-    background-position: 50% 0;
-  }
+#project__pr4 .pr-title {
+  color: #000000;
+  opacity: 0.66;
 }
 
 #project__pr5 {
-  grid-area: 5/1/6/5;
-  background: #1B1C1E url("../img/lbk-mechanization2.png") 50% -40% repeat-x;
+  background: #000000 url("../img/lbk-mechanization1.png") 50% -40% repeat-x;
 }
 @media (width >= 576px) {
   #project__pr5 {
-    grid-area: 3/3/4/5;
     background-position: 50% 0;
   }
 }
 
 #project__pr6 {
-  grid-area: 6/1/7/2;
-  background-color: #005CAE;
+  background: #1B1C1E url("../img/lbk-mechanization2.png") 50% -40% repeat-x;
 }
 @media (width >= 576px) {
   #project__pr6 {
-    grid-area: 4/1/5/2;
+    background-position: 50% 0;
   }
-}
-#project__pr6 img {
-  max-width: 100px;
 }
 
 #project__pr7 {
-  grid-area: 6/2/7/3;
-  background-color: #DAD3C1;
-}
-@media (width >= 576px) {
-  #project__pr7 {
-    grid-area: 4/2/5/3;
-  }
-}
-#project__pr7 img {
-  max-width: 100px;
+  background: #71878D;
 }
 
 #project__pr8 {
-  grid-area: 6/3/7/4;
-  background-color: #2D5492;
-}
-@media (width >= 576px) {
-  #project__pr8 {
-    grid-area: 4/3/5/4;
-  }
+  background-color: #005CAE;
 }
 #project__pr8 img {
   max-width: 100px;
 }
 
 #project__pr9 {
-  grid-area: 6/4/7/5;
-  background-color: #A41000;
-}
-@media (width >= 576px) {
-  #project__pr9 {
-    grid-area: 4/4/5/5;
-  }
+  background-color: #DAD3C1;
 }
 #project__pr9 img {
+  max-width: 100px;
+}
+
+#project__pr10 {
+  background-color: #2D5492;
+}
+#project__pr10 img {
+  max-width: 100px;
+}
+
+#project__pr11 {
+  background-color: #A41000;
+}
+#project__pr11 img {
   max-width: 100px;
 }
 
@@ -842,7 +890,6 @@ BODY {
   left: 10px;
   bottom: 6px;
   font-size: 16px;
-  font-weight: 200;
   color: #FFFFFF;
   opacity: 0.4;
   text-transform: uppercase;
@@ -881,7 +928,6 @@ BODY {
   margin-left: 70px;
   padding-right: 25px;
   font-size: 14px;
-  font-weight: 200;
   overflow-y: auto;
 }
 @media (width >= 768px) {
