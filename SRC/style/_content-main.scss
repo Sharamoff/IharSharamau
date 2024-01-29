@@ -1,6 +1,5 @@
 #container-main .content {
   position: relative;
-  z-index: 1;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -11,7 +10,7 @@
   margin-top: 20vh;
   padding-left: 25px;
   padding-right: 25px;
-  z-index: 1;
+  z-index: $z-index-main;
 
   @media (width >= $size-md) {
     width: 100%;
@@ -49,7 +48,7 @@
   margin-bottom: 10vh;
   padding-left: 25px;
   padding-right: 25px;
-  z-index: 2;
+  z-index: $z-index-main;
 
   @media (width >= $size-md) {
     width: 100%;

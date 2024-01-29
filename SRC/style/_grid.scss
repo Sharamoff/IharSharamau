@@ -22,7 +22,6 @@ BODY {
 
 #container-main {
 	position: relative;
-	z-index: 1;
 	min-height: 100dvh;
 	height: auto;
 	background: $color-bk-main url("../img/bk-main.png") right center;
@@ -37,7 +36,6 @@ BODY {
 
 #container-projects {
 	position: relative;
-	z-index: 1;
 	background: $color-main;
 	scroll-snap-align: start;
 	overflow: hidden;
@@ -45,7 +43,6 @@ BODY {
 
 #container-me {
 	position: relative;
-	z-index: 1;
 	min-height: 100vh;
 	background: $color-bk;
 	scroll-snap-align: start;
@@ -64,7 +61,7 @@ BODY {
 
 .container__bk {
 	position: absolute;
-	z-index: 0;
+	z-index: $z-index-bk;
 	top: 0;
 	width: 100%;
 	height: 100%;
@@ -93,6 +90,15 @@ BODY {
 
 }
 
+
+
+canvas {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: $z-index-canvas;
+}
 
 
 

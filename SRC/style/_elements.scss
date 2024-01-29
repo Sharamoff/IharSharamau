@@ -21,7 +21,7 @@
 .pagebtn-down,
 .pagebtn-up {
   position: absolute;
-  z-index: 5;
+  z-index: $z-index-pagebtn;
   left: 0;
   right: 0;
   height: 32px;
@@ -52,11 +52,17 @@
   @media (width >= $size-lg) {
     display: inline-block;
     position: absolute;
-    z-index: 1;
+    z-index: $z-index-main ;
     left: 10px;
     bottom: 10px;
     font-size: 12px;
     color: #666666;
   }
 
+}
+
+
+
+#stars {
+  opacity: 0.4;
 }

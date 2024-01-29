@@ -176,7 +176,7 @@
 
 .pr-title {
   position: absolute;
-  z-index: 2;
+  z-index: $z-index-main;
   left: 10px;
   bottom: 6px;
   font-size: 16px;
