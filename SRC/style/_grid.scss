@@ -9,6 +9,7 @@ BODY {
 .container {
 	display: block;
 	height: 100%;
+	overflow: hidden;
 
 	@media (width >= $size-lg) {
 		display: grid;
@@ -36,6 +37,7 @@ BODY {
 
 #container-projects {
 	position: relative;
+	z-index: $z-index-content;
 	background: $color-main;
 	scroll-snap-align: start;
 	overflow: hidden;
@@ -43,6 +45,7 @@ BODY {
 
 #container-me {
 	position: relative;
+	z-index: $z-index-content;
 	min-height: 100vh;
 	background: $color-bk;
 	scroll-snap-align: start;
@@ -58,6 +61,39 @@ BODY {
 	}
 
  }
+
+#container-sharamoff {
+	position: absolute;
+	z-index: $z-index-bk;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	//display: flex;
+	//justify-content: flex-end;
+	align-items: center;
+
+	@media (width >= $size-lg) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	img {
+		object-fit: cover;
+		height: 80%;
+		width: auto;
+		position: relative;
+		//right: -50%;
+
+		@media (width >= $size-lg) {
+			height: 100%;
+			right: auto;
+		}
+
+	}
+
+}
 
 .container__bk {
 	position: absolute;
@@ -89,8 +125,6 @@ BODY {
 	}
 
 }
-
-
 
 canvas {
 	position: absolute;

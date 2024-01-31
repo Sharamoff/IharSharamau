@@ -53,8 +53,8 @@
     display: inline-block;
     position: absolute;
     z-index: $z-index-main ;
-    left: 10px;
-    bottom: 10px;
+    left: 20px;
+    bottom: 20px;
     font-size: 12px;
     color: #666666;
   }
@@ -65,4 +65,8 @@
 
 #stars {
   opacity: 0.4;
+}
+
+#sharamoff {
+  z-index: 2;
 }

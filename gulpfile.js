@@ -6,6 +6,8 @@ const
 	plumber = require('gulp-plumber'),
 	prefixer = require('gulp-autoprefixer'),
 	rigger = require('gulp-rigger'),
+	uglify = require('gulp-uglify'),
+	cssmin = require('gulp-clean-css'),
 	rimraf = require('rimraf'),
 	browserSync = require("browser-sync"),
 	cache = require('gulp-cache'),
@@ -57,6 +59,7 @@ gulp.task('html:build', function(done) {
 gulp.task('js:build', function(done) {
 	return gulp.src(path.src.js)
 		.pipe(rigger())
+		.pipe(uglify())
 		.pipe(gulp.dest(path.build.js))
 		.pipe(reload({stream: true}));
 	done();
@@ -70,6 +73,7 @@ gulp.task('style:build', function(done) {
 			errLogToConsole: true
 		}))
 		.pipe(prefixer())
+		.pipe(cssmin())
 		.pipe(gulp.dest(path.build.css))
 		.pipe(reload({stream: true}));
 	done();

@@ -1,2 +1,3 @@
-//= _function.js
 //= _animation.js
+//= _function.js
+

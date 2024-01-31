@@ -1,3 +1,6 @@
+new WOW().init();
+
+
 var Stars = {
   canvas: null,
   context: null,
@@ -122,5 +125,9 @@ var Stars = {
   }
 };
 
-
 Stars.init();
+
+
+
+
+
