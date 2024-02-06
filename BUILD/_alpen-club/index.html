@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon" sizes="any">
+	<link rel="icon" href="favicon.svg" type="image/svg+xml">
+	<link rel="icon" href="favicon.webp" sizes="16x16">
+
+	<title>Апарт-отель Альпен Клаб</title>
+
+	<link href="css/vendor.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/addit.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+
+
+<nav class="sidebar">
+
+	<button class="sidebar__close"><img src="img/icons/i-x.svg" alt="Закрыть меню"></button>
+
+	<div class="sidebar_t">
+		<ul class="sidebar__menu">
+			<li class="active"><a href="index.html">На главную</a></li>
+			<li><a href="hotel.html">Об отеле</a></li>
+			<li><a href="rooms.html">Размещение</a></li>
+			<li><a href="servicelist.html">Наши услуги</a></li>
+			<li><a href="eventslist.html">Мероприятия и банкеты</a></li>
+			<li><a href="restaurant.html">О ресторане</a></li>
+			<li><a href="skiresort.html">Горнолыжный курорт</a></li>
+			<li><a href="photogallery.html">Фотогалерея</a></li>
+			<li><a href="reviews.html">Отзывы</a></li>
+			<li><a href="vacancylist.html">Вакансии</a></li>
+			<li><a href="help.html">Помощь</a></li>
+			<li><a href="contacts.html">Контакты</a></li>
+		</ul>
+	</div>
+
+	<div class="sidebar_b">
+		<div class="sidebar__tel">
+			<span>Позвонить нам</span>
+			<a href="tel:+78005553535">+7 (800) 555-35-35</a>
+		</div>
+		<div class="sidebar__email">
+			<span>Написать нам на почту</span>
+			<a href="mailto:zakaz@alpen-club.ru">zakaz@alpen-club.ru</a>
+		</div>
+		<div class="sidebar__socicons">
+			<a href="#" class="socicon socicon--wathsapp" title="Alpen Club в Whathsapp"></a>
+			<a href="#" class="socicon socicon--vk" title="Alpen Club в VK"></a>
+			<a href="#" class="socicon socicon--tel" title="Alpen Club"></a>
+		</div>
+	</div>
+
+</nav>
+<div class="overlay"></div>
+
+
+
+
+
+<header class="header">
+  <div class="container-fluid">
+
+
+    <div class="header_l">
+
+      <a href="https://www.alpen-club.ru/" class="header__logo"><img src="img/logo-top.png" alt="Alpen Club"></a>
+
+      <nav class="header__menu">
+        <button class="menu-main" id="id_menu-main" title="Главное меню">
+          <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.05 5H0.95C0.42533 5 0 5.42533 0 5.95V6.05C0 6.57467 0.42533 7 0.95 7H17.05C17.5747 7 18 6.57467 18 6.05V5.95C18 5.42533 17.5747 5 17.05 5Z" fill="#222222"/>
+            <path d="M17.05 10H0.95C0.42533 10 0 10.4253 0 10.95V11.05C0 11.5747 0.42533 12 0.95 12H17.05C17.5747 12 18 11.5747 18 11.05V10.95C18 10.4253 17.5747 10 17.05 10Z" fill="#222222"/>
+            <path d="M17.05 0H0.95C0.42533 0 0 0.425329 0 0.95V1.05C0 1.57467 0.42533 2 0.95 2H17.05C17.5747 2 18 1.57467 18 1.05V0.95C18 0.425329 17.5747 0 17.05 0Z" fill="#222222"/>
+          </svg>
+          <span>Меню</span>
+        </button>
+        <ul>
+          <li><a href="rooms.html">Размещение</a></li>
+          <li><a href="restaurant.html">Ресторан</a></li>
+          <li><a href="404.html">3D тур</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+
+    <div class="header_r">
+
+      <a href="tel:+78005553535" class="header__tel"><img src="img/icons/i-tel.svg" alt="">+7 (800) 555-35-35</a>
+
+      <a href="#" class="header__user" title="Личный кабинет"><img src="img/icons/i-user.svg" alt="Личный кабинет"></a>
+
+      <button class="header__book b-btn" data-bs-toggle="modal" data-bs-target="#id_modal-app">Забронировать<i class="i-arrow i-arrow--w"></i></button>
+
+    </div>
+
+
+  </div>
+</header>
+
+
+
+
+
+<main>
+
+
+
+<section class="pagesection sc--slider-index">
+<div class="container-fluid">
+
+	<div class="block-mainslider slide" id="id_mainslider-index">
+		<div class="slider-item">
+			<div class="slider-item__txt">
+				<h2>Отдыхай и катай</h2>
+				<p>Пакетное предложение на проживание и ски-пассы.<br>
+					Незабываемый зимний отпуск по выгодному тарифу!</p>
+				<a href="skiresort.html" class="b-btn b-btn--white">Подробнее<i class="i-arrow i-arrow--g"></i></a>
+			</div>
+			<img src="img/collages/cl1.jpg" class="slider-item__img" alt="">
+		</div>
+		<div class="slider-item">
+			<div class="slider-item__txt">
+				<h2>Наш отель</h2>
+				<p>«ALPEN CLUB»&nbsp;&mdash;&nbsp;это комфортабельные гостиничные дома и современный номерной фонд.</p>
+				<a href="rooms.html" class="b-btn b-btn--white">Подробнее<i class="i-arrow i-arrow--g"></i></a>
+			</div>
+			<img src="img/collages/cl2.jpg" class="slider-item__img" alt="">
+		</div>
+		<div class="slider-item">
+			<img src="img/collages/cl3.jpg" class="slider-item__img" alt="">
+		</div>
+		<div class="slider-item">
+			<div class="slider-item__txt">
+				<h2>Наш ресторан</h2>
+				<p>Разнообразный отдых, европейский сервис и авторская кухня ждут каждого гостя в Alpen&nbsp;Club!</p>
+				<a href="restaurant.html" class="b-btn b-btn--white">Подробнее<i class="i-arrow i-arrow--g"></i></a>
+			</div>
+			<img src="img/collages/cl4.jpg" class="slider-item__img" alt="">
+		</div>
+	</div>
+
+</div>
+</section>
+
+
+
+<section class="pagesection sc--bnovo-index">
+<div class="container-fluid">
+
+	<div class="block-bnovo">
+		Модуль онлайн-бронирования
+	</div>
+
+</div>
+</section>
+
+
+
+<section class="pagesection pagesection--fullwidth sc--introducing">
+<div class="container-fluid">
+
+
+	<div class="block-inrtroducing">
+
+		<div class="inrtroducing__img-l">
+			<div class="img-l1">
+				<img src="img/collages/il1.jpg" alt="">
+			</div>
+		</div>
+
+		<div class="inrtroducing__txt">
+			<h1>
+				Grand resort
+				<strong>Alpen Club</strong>
+			</h1>
+			<p>«ALPEN CLUB»&nbsp;&mdash;&nbsp;это комфортабельные гостиничные дома, современный номерной фонд, спортивные площадки, детские зоны, ресторанный комплекс, тематические бары, конференц-зал, крытая парковка, и конечно же доброжелательный персонал, который в любое время ответит на все Ваши вопросы и поспособствует хорошему отдыху.</p>
+			<a href="rooms.html" class="b-btn">Подробнее<i class="i-arrow i-arrow--w"></i></a>
+		</div>
+
+		<div class="inrtroducing__img-r">
+			<div class="img-r1"><img src="img/collages/il2.jpg" alt=""></div>
+			<div class="img-r2"><img src="img/collages/il3.jpg" alt=""></div>
+		</div>
+
+	</div>
+
+
+</div>
+</section>
+
+
+
+<section class="pagesection sc--accomodation-index">
+<div class="container-fluid">
+
+
+	<a href="rooms.html" class="h2--link">Размещение</a>
+
+	<div class="block-scheader">
+		<div class="scheader__desc">
+			<p>Подстройте отдых под свой ритм. Гостиничный комплекс в самом центре горнолыжного курорта.</p>
+		</div>
+		<div class="scheader__link">
+			<a href="rooms.html" class="a--more">Посмотреть все</a>
+		</div>
+	</div>
+
+
+	<div class="block-apartamentlist">
+		<div class="row row--margined">
+
+			<div class="col-sm-6 col-lg-4">
+				<div class="apartamentlist__item" id="id_apartamentlist1" onclick="location.href = 'apartament.html'">
+					<div class="apartamentlist__item-pics">
+						<ul class="apartamentlist__item-pics_label">
+							<li class="item-label item-label--tv" data-toggle="tooltip" title="Телевизор"></li>
+							<li class="item-label item-label--cond" data-toggle="tooltip" title="Кондинционер"></li>
+							<li class="item-label item-label--wardrobe" data-toggle="tooltip" title="Гардеробная"></li>
+							<li class="item-label item-label--wifi" data-toggle="tooltip" title="WiFi"></li>
+						</ul>
+						<div class="apartamentlist__item-pics_hoverbar">
+							<div class="hoverbar1"></div>
+							<div class="hoverbar2"></div>
+							<div class="hoverbar3"></div>
+							<div class="hoverbar4"></div>
+						</div>
+						<div class="apartamentlist__item-pics_slide" onclick="location.href = 'apartament.html'">
+							<img src="img/apartaments/app1_.jpg" alt="">
+							<img src="img/apartaments/app2_.jpg" alt="">
+							<img src="img/apartaments/app3_.jpg" alt="">
+							<img src="img/apartaments/app4_.jpg" alt="">
+						</div>
+					</div>
+					<div class="apartamentlist__item-descript">
+						<div class="descript__title">Апартаменты БГД1 (улучшенные)</div>
+						<div class="descript__note">до 2 гостей<img src="img/icons/dot-g.svg" class="dot-g" alt="">20 м2</div>
+						<div class="descript__price">от 12 400 ₽&nbsp;<span>ночь</span></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-lg-4">
+				<div class="apartamentlist__item" id="id_apartamentlist2" onclick="location.href = 'apartament.html'">
+					<div class="apartamentlist__item-pics">
+						<ul class="apartamentlist__item-pics_label">
+							<li class="item-label item-label--tv" data-toggle="tooltip" title="Телевизор"></li>
+							<li class="item-label item-label--cond" data-toggle="tooltip" title="Кондинционер"></li>
+							<li class="item-label item-label--wardrobe" data-toggle="tooltip" title="Гардеробная"></li>
+							<li class="item-label item-label--wifi" data-toggle="tooltip" title="WiFi"></li>
+						</ul>
+						<div class="apartamentlist__item-pics_hoverbar">
+							<div class="hoverbar1"></div>
+							<div class="hoverbar2"></div>
+							<div class="hoverbar3"></div>
+							<div class="hoverbar4"></div>
+						</div>
+						<div class="apartamentlist__item-pics_slide">
+							<img src="img/apartaments/app5_.jpg" alt="">
+							<img src="img/apartaments/app6_.jpg" alt="">
+							<img src="img/apartaments/app1_.jpg" alt="">
+							<img src="img/apartaments/app2_.jpg" alt="">
+						</div>
+					</div>
+					<div class="apartamentlist__item-descript">
+						<div class="descript__title">Апартаменты БГД2 (улучшенные)</div>
+						<div class="descript__note">до 2 гостей<img src="img/icons/dot-g.svg" class="dot-g" alt="">19,5 м2</div>
+						<div class="descript__price">от 11 800 ₽&nbsp;<span>ночь</span></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-lg-4">
+				<div class="apartamentlist__item" id="id_apartamentlist3" onclick="location.href = 'apartament.html'">
+					<div class="apartamentlist__item-pics">
+						<ul class="apartamentlist__item-pics_label">
+							<li class="item-label item-label--tv" data-toggle="tooltip" title="Телевизор"></li>
+							<li class="item-label item-label--cond" data-toggle="tooltip" title="Кондинционер"></li>
+							<li class="item-label item-label--wifi" data-toggle="tooltip" title="WiFi"></li>
+						</ul>
+						<div class="apartamentlist__item-pics_hoverbar">
+							<div class="hoverbar1"></div>
+							<div class="hoverbar2"></div>
+							<div class="hoverbar3"></div>
+							<div class="hoverbar4"></div>
+						</div>
+						<div class="apartamentlist__item-pics_slide">
+							<img src="img/apartaments/app4_.jpg" alt="">
+							<img src="img/apartaments/app3_.jpg" alt="">
+							<img src="img/apartaments/app2_.jpg" alt="">
+							<img src="img/apartaments/app1_.jpg" alt="">
+						</div>
+					</div>
+					<div class="apartamentlist__item-descript">
+						<div class="descript__title">Апартаменты БГД3</div>
+						<div class="descript__note">до 2 гостей<img src="img/icons/dot-g.svg" class="dot-g" alt="">20 м2</div>
+						<div class="descript__price">от 10 200 ₽&nbsp;<span>ночь</span></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-lg-4">
+				<div class="apartamentlist__item" id="id_apartamentlist4" onclick="location.href = 'apartament.html'">
+					<div class="apartamentlist__item-pics">
+						<ul class="apartamentlist__item-pics_label">
+							<li class="item-label item-label--cond" data-toggle="tooltip" title="Кондинционер"></li>
+							<li class="item-label item-label--wardrobe" data-toggle="tooltip" title="Гардеробная"></li>
+							<li class="item-label item-label--wifi" data-toggle="tooltip" title="WiFi"></li>
+						</ul>
+						<div class="apartamentlist__item-pics_hoverbar">
+							<div class="hoverbar1"></div>
+							<div class="hoverbar2"></div>
+							<div class="hoverbar3"></div>
+							<div class="hoverbar4"></div>
+						</div>
+						<div class="apartamentlist__item-pics_slide">
+							<img src="img/apartaments/app3_.jpg" alt="">
+							<img src="img/apartaments/app1_.jpg" alt="">
+							<img src="img/apartaments/app2_.jpg" alt="">
+							<img src="img/apartaments/app4_.jpg" alt="">
+						</div>
+					</div>
+					<div class="apartamentlist__item-descript">
+						<div class="descript__title">Апартаменты</div>
+						<div class="descript__note">до 2 гостей<img src="img/icons/dot-g.svg" class="dot-g" alt="">20 м2</div>
+						<div class="descript__price">от 12 400 ₽&nbsp;<span>ночь</span></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-lg-4">
+				<div class="apartamentlist__item" id="id_apartamentlist5" onclick="location.href = 'apartament.html'">
+					<div class="apartamentlist__item-pics">
+						<ul class="apartamentlist__item-pics_label">
+							<li class="item-label item-label--cond" data-toggle="tooltip" title="Кондинционер"></li>
+							<li class="item-label item-label--wardrobe" data-toggle="tooltip" title="Гардеробная"></li>
+							<li class="item-label item-label--wifi" data-toggle="tooltip" title="WiFi"></li>
+						</ul>
+						<div class="apartamentlist__item-pics_hoverbar">
+							<div class="hoverbar1"></div>
+							<div class="hoverbar2"></div>
+							<div class="hoverbar3"></div>
+							<div class="hoverbar4"></div>
+						</div>
+						<div class="apartamentlist__item-pics_slide">
+							<img src="img/apartaments/app1_.jpg" alt="">
+							<img src="img/apartaments/app4_.jpg" alt="">
+							<img src="img/apartaments/app2_.jpg" alt="">
+							<img src="img/apartaments/app5_.jpg" alt="">
+						</div>
+					</div>
+					<div class="apartamentlist__item-descript">
+						<div class="descript__title">Апартаменты БГД4 (улучшенные)</div>
+						<div class="descript__note">до 2 гостей<img src="img/icons/dot-g.svg" class="dot-g" alt="">19,5 м2</div>
+						<div class="descript__price">от 11 800 ₽&nbsp;<span>ночь</span></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-6 col-lg-4">
+				<div class="apartamentlist__item" id="id_apartamentlist6" onclick="location.href = 'apartament.html'">
+					<div class="apartamentlist__item-pics">
+						<ul class="apartamentlist__item-pics_label">
+							<li class="item-label item-label--tv" data-toggle="tooltip" title="Телевизор"></li>
+							<li class="item-label item-label--cond" data-toggle="tooltip" title="Кондинционер"></li>
+							<li class="item-label item-label--wifi" data-toggle="tooltip" title="WiFi"></li>
+						</ul>
+						<div class="apartamentlist__item-pics_hoverbar">
+							<div class="hoverbar1"></div>
+							<div class="hoverbar2"></div>
+							<div class="hoverbar3"></div>
+							<div class="hoverbar4"></div>
+						</div>
+						<div class="apartamentlist__item-pics_slide">
+							<img src="img/apartaments/app6_.jpg" alt="">
+							<img src="img/apartaments/app5_.jpg" alt="">
+							<img src="img/apartaments/app4_.jpg" alt="">
+							<img src="img/apartaments/app3_.jpg" alt="">
+						</div>
+					</div>
+					<div class="apartamentlist__item-descript">
+						<div class="descript__title">Апартаменты</div>
+						<div class="descript__note">до 2 гостей<img src="img/icons/dot-g.svg" class="dot-g" alt="">20 м2</div>
+						<div class="descript__price">от 10 200 ₽&nbsp;<span>ночь</span></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+</div>
+</section>
+
+
+
+<section class="pagesection sc--restaurant-index">
+<div class="container-fluid">
+
+	<div class="block-restaurantinfo">
+		<div class="row">
+
+
+			<div class="col-sm-12 col-md-6 col-xxl-5">
+				<div class="restaurantinfo__img">
+					<img src="img/restaurant/ilrest1.jpg" alt="">
+				</div>
+			</div>
+
+
+			<div class="col-sm-12 col-md-6 col-xxl-7">
+				<div class="restaurantinfo__descript">
+
+					<div class="restaurantinfo__descript-txt">
+						<a href="restaurant.html" class="h2--link">О ресторане</a>
+						<p>«ALPEN CLUB»&nbsp;&mdash;&nbsp;это комфортабельные гостиничные дома, современный номерной фонд, спортивные площадки, детские зоны, ресторанный комплекс, тематические бары, конференц-зал, крытая парковка, и конечно же доброжелательный персонал, который в любое время ответит на все Ваши вопросы и поспособствует хорошему отдыху.</p>
+					</div>
+
+					<div class="restaurantinfo__descript-btns">
+						<a href="404.html" class="b-btn">Смотреть меню<i class="i-arrow i-arrow--w"></i></a>
+						<a href="404.html" class="b-btn b-btn--outline">3D Тур</a>
+					</div>
+
+					<div class="restaurantinfo__descript-dishs" id="id_dishlist">
+						<div class="dish-item" data-toggle="tooltip" title="Блюдо 1"><img src="img/restaurant/ildish1_.png" alt="Блюдо 1"></div>
+						<div class="dish-item" data-toggle="tooltip" title="Блюдо 2"><img src="img/restaurant/ildish2_.png" alt="Блюдо 2"></div>
+						<div class="dish-item" data-toggle="tooltip" title="Блюдо 3"><img src="img/restaurant/ildish3_.png" alt="Блюдо 3"></div>
+						<div class="dish-item" data-toggle="tooltip" title="Блюдо 4"><img src="img/restaurant/ildish4_.png" alt="Блюдо 4"></div>
+						<div class="dish-item" data-toggle="tooltip" title="Блюдо 5"><img src="img/restaurant/ildish5_.png" alt="Блюдо 5"></div>
+						<div class="dish-item" data-toggle="tooltip" title="Блюдо 6"><img src="img/restaurant/ildish6_.png" alt="Блюдо 6"></div>
+						<div class="dish-item" data-toggle="tooltip" title="Блюдо 7"><img src="img/restaurant/ildish7_.png" alt="Блюдо 7"></div>
+						<div class="dish-item" data-toggle="tooltip" title="Блюдо 8"><img src="img/restaurant/ildish8_.png" alt="Блюдо 8"></div>
+						<div class="dish-item" data-toggle="tooltip" title="Блюдо 9"><img src="img/restaurant/ildish9_.png" alt="Блюдо 9"></div>
+						<div class="dish-item" data-toggle="tooltip" title="Блюдо 10"><img src="img/restaurant/ildish10_.png" alt="Блюдо 10"></div>
+					</div>
+
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+</div>
+</section>
+
+
+
+<section class="pagesection sc--services-index">
+<div class="container-fluid">
+
+
+	<a href="servicelist.html" class="h2--link">Наши услуги</a>
+
+	<div class="block-scheader">
+		<div class="scheader__desc">
+			<p>Разнообразный отдых, европейский сервис и авторская кухня ждут каждого гостя в Alpen Club!</p>
+		</div>
+		<div class="scheader__link">
+			<a href="servicelist.html" class="a--more">Посмотреть все</a>
+		</div>
+	</div>
+
+
+	<div class="block-servicelist" id="id_servicelist-index">
+
+		<div class="servicelist__item" onclick="location.href = 'musicbar.html'">
+			<div class="servicelist__item-pic">
+				<div class="item-category"><span class="c--bk-blue">Развлечение</span></div>
+				<div class="item-title">Music bar<span>Дискотеки и концерты</span></div>
+				<img src="img/services/ils1_.jpg" class="item-pic" alt="">
+			</div>
+			<div class="servicelist__item-descript">Новая площадка развлекательного комплекса, которая захватит вас!</div>
+		</div>
+
+		<div class="servicelist__item" onclick="location.href = 'karaokehall.html'">
+			<div class="servicelist__item-pic">
+				<div class="item-category"><span class="c--bk-blue">Развлечение</span></div>
+				<div class="item-title">Караоке Hall<span>Песни и вино</span></div>
+				<img src="img/services/ils2_.jpg" class="item-pic" alt="">
+			</div>
+			<div class="servicelist__item-descript">Что может быть лучше, чем послушать классную группу или двигаться в такт музыке ди-джея?!</div>
+		</div>
+
+		<div class="servicelist__item" onclick="location.href = 'childroom.html'">
+			<div class="servicelist__item-pic">
+				<div class="item-category"><span class="c--bk-rose">Для детей</span></div>
+				<div class="item-title">Детская комната<span>Подвижные игры</span></div>
+				<img src="img/services/ils3_.jpg" class="item-pic" alt="">
+			</div>
+			<div class="servicelist__item-descript">Особенно трепетно мы относимся к организации детских праздников.</div>
+		</div>
+
+		<div class="servicelist__item" onclick="location.href = 'skiresort.html'">
+			<div class="servicelist__item-pic">
+				<div class="item-category"><span class="c--bk-gray">Для туристов</span></div>
+				<div class="item-title">Экскурсии<span>Горы и лесные тропы</span></div>
+				<img src="img/services/ils4_.jpg" class="item-pic" alt="">
+			</div>
+			<div class="servicelist__item-descript">Новая площадка развлекательного комплекса, которая захватит вас!</div>
+		</div>
+
+	</div>
+
+
+</div>
+</section>
+
+
+
+<section class="pagesection sc--spa-index">
+<div class="container-fluid">
+
+
+	<div class="block-simplecl">
+		<div class="simplecl__txt">
+			<h2>Проведи вечер<br>в нашем SPA-центре</h2>
+			<p>Пакетное предложение на проживание и ски-пассы.<br>
+				Незабываемый зимний отпуск по выгодному тарифу!</p>
+			<a href="404.html" class="b-btn b-btn--white">Подробнее<i class="i-arrow i-arrow--g"></i></a>
+		</div>
+		<img src="img/collages/ilspa.jpg" class="simplecl__pic" alt="SPA-центр">
+	</div>
+
+
+</div>
+</section>
+
+
+
+<section class="pagesection sc--events-index">
+<div class="container-fluid">
+
+
+	<a href="eventslist.html" class="h2--link">Мероприятия и банкеты</a>
+
+	<div class="block-scheader">
+		<div class="scheader__desc">
+			<p>Создадим стильный праздник с неповторимой атмосферой вашего события. На базе гостинично-развлекательного комплекса Alpen Club команда event-сервиса подготовит для вас любой праздник, по вашим пожеланиям.</p>
+		</div>
+		<div class="scheader__link">
+			<a href="eventslist.html" class="a--more">Посмотреть все</a>
+		</div>
+	</div>
+
+
+	<div class="block-eventslist" id="id_eventslist-index">
+
+		<div class="eventslist__item" onclick="location.href = 'childholyday.html'">
+			<div class="eventslist__item-pic">
+				<div class="item-category"><span class="c--bk-blue">Развлечение</span></div>
+				<div class="item-title">Детские праздники </div>
+				<img src="img/events/ile1_.jpg" class="item-pic" alt="">
+			</div>
+		</div>
+
+		<div class="eventslist__item" onclick="location.href = 'eventsorg.html'">
+			<div class="eventslist__item-pic">
+				<div class="item-category"><span class="c--bk-blue">Развлечение</span></div>
+				<div class="item-title">Организация мероприятий</div>
+				<img src="img/events/ile2_.jpg" class="item-pic" alt="">
+			</div>
+		</div>
+
+		<div class="eventslist__item" onclick="location.href = 'wedding.html'">
+			<div class="eventslist__item-pic">
+				<div class="item-category"><span class="c--bk-blue">Развлечение</span></div>
+				<div class="item-title">Организация свадьбы</div>
+				<img src="img/events/ile3_.jpg" class="item-pic" alt="">
+			</div>
+		</div>
+
+		<div class="eventslist__item" onclick="location.href = 'halls.html'">
+			<div class="eventslist__item-pic">
+				<div class="item-category"><span class="c--bk-blue">Развлечение</span></div>
+				<div class="item-title">Банкетные залы </div>
+				<img src="img/events/ile4_.jpg" class="item-pic" alt="">
+			</div>
+		</div>
+
+	</div>
+
+
+</div>
+</section>
+
+
+
+<section class="pagesection sc--gallerylistheader-index">
+<div class="container-fluid">
+
+	<a href="photogallery.html" class="h2--link">Фотогалерея</a>
+
+	<div class="block-scheader">
+		<div class="scheader__desc">
+			<p>Текст о наших прекрасных фотографиях и выборе, который мы предоставляем нашим гостям.</p>
+		</div>
+		<div class="scheader__link">
+			<a href="photogallery.html" class="a--more">Посмотреть все</a>
+		</div>
+	</div>
+
+</div>
+</section>
+
+<section class="pagesection pagesection--fullwidth sc--gallerylist-index">
+<div class="container-fluid">
+	<div class="block-gallerylist" id="id_gallerylist-index">
+		<div class="gallerylist__pic"><img src="img/photogallery/photo1_.jpg" alt=""></div>
+		<div class="gallerylist__pic"><img src="img/photogallery/photo2_.jpg" alt=""></div>
+		<div class="gallerylist__pic"><img src="img/photogallery/photo3_.jpg" alt=""></div>
+		<div class="gallerylist__pic"><img src="img/photogallery/photo4_.jpg" alt=""></div>
+		<div class="gallerylist__pic"><img src="img/photogallery/photo5_.jpg" alt=""></div>
+		<div class="gallerylist__pic"><img src="img/photogallery/photo6_.jpg" alt=""></div>
+		<div class="gallerylist__pic"><img src="img/photogallery/photo7_.jpg" alt=""></div>
+		<div class="gallerylist__pic"><img src="img/photogallery/photo8_.jpg" alt=""></div>
+	</div>
+</div>
+</section>
+
+
+
+</main>
+
+
+
+
+
+<footer class="footer">
+<div class="container-fluid">
+
+
+  <div class="footer__copy">
+    <img src="img/logo-btm.png" class="copy__logo" alt="Апарт-отель Альпен Клаб">
+    <div>
+      <div class="copy__txt">&copy;2024&nbsp;Апарт-отель Альпен&nbsp;Клаб</div>
+      <ul class="copy__menu ul--simple">
+        <li><a href="404.html">Политика конфиденциальности</a></li>
+        <li><a href="404.html">Правила проживания</a></li>
+        <li><a href="404.html">Публичная оферта</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+  <div class="footer__sections">
+    <div class="footer-hdr">Разделы</div>
+    <div class="section__topic">
+      <ul class="ul--simple">
+        <li><a href="hotel.html">Об&nbsp;отеле</a></li>
+        <li><a href="rooms.html">Размещение</a></li>
+        <li><a href="restaurant.html">О&nbsp;ресторане</a></li>
+        <li><a href="servicelist.html">Наши услуги</a></li>
+        <li><a href="eventslist.html">Мероприятия и&nbsp;банкеты</a></li>
+      </ul>
+      <ul class="ul--simple">
+        <li><a href="skiresort.html">Экскурсии</a></li>
+        <li><a href="photogallery.html">Фотогалерея</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="404.html">3D Тур</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="footer__address">
+    <div class="footer-hdr">Адрес</div>
+      <div class="address__name">
+        <a href="contacts.html#map" class="socicon socicon--geo" title="Показать на карте"></a>
+        <div>
+          <span>Адрес курорта</span>
+          Кемеровская&nbsp;область,
+          <br>поселок&nbsp;Шерегеш, гора&nbsp;Зеленая
+        </div>
+      </div>
+      <div class="address__pay">
+        <div class="payicon payicon--mc" title="MasterCard"></div>
+        <div class="payicon payicon--visa" title="Visa"></div>
+        <div class="payicon payicon--mir" title="Мир"></div>
+      </div>
+  </div>
+
+
+  <div class="footer__contacts">
+    <div class="footer-hdr">Контакты</div>
+    <div class="contacts__plate">
+      <div class="contacts__tel">
+        <span>Позвонить нам</span>
+        <a href="tel:+78005553535">+7 (800) 555-35-35</a>
+      </div>
+      <div class="contacts__email">
+        <span>Написать нам на почту</span>
+        <a href="mailto:zakaz@alpen-club.ru">zakaz@alpen-club.ru</a>
+      </div>
+      <div class="contacts__socicons">
+        <a href="#" class="socicon socicon--wathsapp" title="Alpen Club в Whathsapp"></a>
+        <a href="#" class="socicon socicon--vk" title="Alpen Club в VK"></a>
+        <a href="#" class="socicon socicon--tel" title="Alpen Club"></a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+</footer>
+
+
+
+
+
+<div class="modal fade" id="id_modal-app" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+    <div class="modal-content">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      <div class="row">
+
+        <div class="col-sm-6 d-none d-sm-block">
+          <div class="block-modalogo">
+            <img src="img/logo-btm.png" width="218" height="133" alt="Alpen Club">
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <form class="fm_app">
+            <div class="modal-body">
+              <h3>Оставьте заявку и менеджер Alpen Club свяжется с вами в ближайшее время! </h3>
+              <p class="form-note">В отзывах не допускаются оскорбительные и унижающие достоинство сообщения.</p>
+              <div class="form-group">
+                <label for="fm_app-name" class="form-label">Как к вам обращаться</label>
+                <input type="text" class="form-control" id="fm_app-name" placeholder="Иван Александров">
+              </div>
+              <div class="form-group">
+                <label for="fm_app-tel" class="form-label">Ваш телефон для связи</label>
+                <input type="tel" class="form-control" id="fm_app-tel" placeholder="+7 499 555-555-555">
+              </div>
+              <div class="form-group">
+                <label for="fm_app-txt" class="form-label">Ваш комментарий</label>
+                <textarea class="form-control" rows="3" id="fm_app-txt" placeholder="Введите ваше сообщение..."></textarea>
+              </div>
+              <div class="form-btn-group">
+                <button type="submit" class="b-btn" data-bs-dismiss="modal">Отправить комментарий<i class="i-arrow i-arrow--w"></i></button>
+                <div class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="js/vendor.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

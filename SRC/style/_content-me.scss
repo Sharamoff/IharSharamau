@@ -13,6 +13,7 @@
     line-height: 1;
     font-family: $font-family-big;
     font-size: 100px;
+    caret-color: transparent;
 
     @media (width >= $size-md) {
       font-size: 120px;
@@ -26,6 +27,7 @@
     padding-right: 25px;
     font-size: 14px;
     overflow-y: auto;
+    z-index: $z-index-content;
 
     @media (width >= $size-md) {
       margin-left: 85px;

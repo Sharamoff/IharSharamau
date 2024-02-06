@@ -24,8 +24,8 @@ var Stars = {
               ],
 
   mouseDistance: 30,
-  radius: .4,
-  maxRadius: 1.5,
+  radius: .5,
+  maxRadius: 1.2,
 
   //  MOUSE
   mouse: {
