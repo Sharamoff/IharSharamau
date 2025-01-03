@@ -4,7 +4,7 @@ const
 	gulp = require('gulp'),
 	sass = require('gulp-sass')(require('sass')),
 	plumber = require('gulp-plumber'),
-	prefixer = require('gulp-autoprefixer'),
+	autoprefixer = require('gulp-autoprefixer').default,
 	rigger = require('gulp-rigger'),
 	uglify = require('gulp-uglify'),
 	cssmin = require('gulp-clean-css'),
@@ -18,22 +18,19 @@ const path = {
 		html:   'BUILD/',
 		js:     'BUILD/js/',
 		css:    'BUILD/css/',
-		img:    'BUILD/img/',
-		fonts:  'BUILD/fonts/'
+		img:    'BUILD/img/'
 	},
 	src: {
 		html:   'SRC/*.html',
 		js:     'SRC/js/*.js',
 		style:  'SRC/style/*.scss',
-		img:    'SRC/img/**/*.*',
-		fonts:  'SRC/fonts/**/*.*'
+		img:    'SRC/img/**/*.*'
 	},
 	watch: {
 		html:   'SRC/**/*.html',
 		js:     'SRC/js/**/*.js',
 		style:  'SRC/style/**/*.scss',
-		img:    'SRC/img/**/*.*',
-		fonts:  'SRC/fonts/**/*.*'
+		img:    'SRC/img/**/*.*'
 	},
 	clean: './build'
 };
@@ -72,7 +69,7 @@ gulp.task('style:build', function(done) {
 			sourceMap: false,
 			errLogToConsole: true
 		}))
-		.pipe(prefixer())
+		.pipe(autoprefixer())
 		.pipe(cssmin())
 		.pipe(gulp.dest(path.build.css))
 		.pipe(reload({stream: true}));
@@ -96,7 +93,6 @@ gulp.task('build', gulp.parallel(
 	'html:build',
 	'js:build',
 	'style:build',
-	'fonts:build',
 	'image:build'
 	)
 );
@@ -106,7 +102,6 @@ gulp.task('watch', function(done) {
 	gulp.watch(path.watch.html,  gulp.series('html:build'));
 	gulp.watch(path.watch.js,    gulp.series('js:build'));
 	gulp.watch(path.watch.style, gulp.series('style:build'));
-	gulp.watch(path.watch.fonts, gulp.series('fonts:build'));
 	gulp.watch(path.watch.img, 	 gulp.series('image:build'));
 	done();
 });
