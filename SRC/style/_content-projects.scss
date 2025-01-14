@@ -1,23 +1,29 @@
 #container-projects .content {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(9, 1fr);
-  gap: 0;
-  min-height: 100vh;
-  grid-auto-flow: row;
+  display: block;
   z-index: $z-index-content;
 
   @media (width >= $size-sm) {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr) 0.5fr;
+    gap: 0;
+    min-height: 100vh;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "project__gvinico--site project__gvinico--site"
+    "project__gutewetter--site  project__gutewetter--mobapp"
+    "project__cryptosimple--logo project__cryptosimple--logo"
+    "project__mechanization--site project__alpenclub--layout"
+    "project__manteraresidence--layout project__mechanization--mobapp"
+    "projectadd projectadd";
   }
 
 }
 
 .project {
   display: flex;
-  position: relative;
+  position: relative;  
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -25,6 +31,15 @@
   padding: 20px;
   overflow: hidden;
   transition: 1s;
+  min-height: 120px;
+
+  @media (width >= $size-md) {
+    min-height: auto;
+  }
+
+  @media (height <= $size-md) {
+    min-height: 80px;
+  }
 
   img {
     width: 100%;
@@ -35,11 +50,11 @@
 
     @media (width >= $size-md) {
       max-width: 300px;
-      max-height: 130px;
+      max-height: 120px;
     }
 
     @media (height <= $size-md) {
-      max-height: 100px;
+      max-height: 80px;
     }
 
   }
@@ -47,7 +62,6 @@
   &:hover {
 
     img {
-      //scale: 1.06;
       animation-duration: 1s;
       animation-fill-mode: both;
       backface-visibility: visible;
@@ -62,56 +76,80 @@
 
 }
 
-#project__pr1 { grid-area: 1 / 1 / 2 / 3; }
-#project__pr2 { grid-area: 2 / 1 / 3 / 3; }
-#project__pr3 { grid-area: 3 / 1 / 4 / 3; }
-#project__pr4 { grid-area: 4 / 1 / 5 / 3; }
-#project__pr5 { grid-area: 5 / 1 / 6 / 3; }
-#project__pr6 { grid-area: 6 / 1 / 7 / 3; }
-#project__pr7 { grid-area: 7 / 1 / 8 / 3; }
-#project__pr8 { grid-area: 8 / 1 / 9 / 2; }
-#project__pr9 { grid-area: 8 / 2 / 9 / 3; }
-#project__pr10 { grid-area: 9 / 1 / 10 / 2; }
-#project__pr11 { grid-area: 9 / 2 / 10 / 3; }
+.projectadd {
+  grid-area: projectadd;
+  display: flex;
+  flex-wrap: nowrap;
 
-@media (width >= $size-sm) {
-  #project__pr1 { grid-area: 1 / 1 / 2 / 3; }
-  #project__pr2 { grid-area: 1 / 3 / 2 / 5; }
-  #project__pr3 { grid-area: 2 / 1 / 3 / 5; }
-  #project__pr4 { grid-area: 3 / 1 / 4 / 3; }
-  #project__pr5 { grid-area: 3 / 3 / 4 / 5; }
-  #project__pr6 { grid-area: 4 / 1 / 5 / 3; }
-  #project__pr7 { grid-area: 4 / 3 / 5 / 5; }
-  #project__pr8 { grid-area: 5 / 1 / 6 / 2; }
-  #project__pr9 { grid-area: 5 / 2 / 6 / 3; }
-  #project__pr10 { grid-area: 5 / 3 / 6 / 4; }
-  #project__pr11 { grid-area: 5 / 4 / 6 / 5; }
+  .project {
+    flex: 1 1 auto;
+    min-height: 80px !important;
+
+    @media (height <= $size-md) {
+      min-height: 60px !important;
+    }
+
+    img {
+      max-width: 50px !important;
+
+      @media (width >= $size-md) {
+        max-width: 60px !important;
+      }
+
+    }
+
+  }
+
 }
 
 
 
-#project__pr1 {
+#project__gvinico--site {
+  grid-area: project__gvinico--site;
+  background: #AE194A url("../img/lbk-gvinico.png") 50% 50%;
+  background-size: cover;
+
+  .pr-title {
+    opacity: 0.6;
+  }
+
+}
+
+#project__gutewetter--site {
+  grid-area: project__gutewetter--site;
+  background-color: #DDDDDD;
+
+  .pr-title {
+    color: #000000;
+    opacity: 0.66;
+  }
+
+}
+
+#project__gutewetter--mobapp {
+  grid-area: project__gutewetter--mobapp;
   background: #1D1D1F url("../img/lbk-gutewetter1.svg") 50% 50%;
   background-size: cover;
 }
 
-#project__pr2 {
-  background-color: #DDDDDD;
-
-   .pr-title {
-     color: #000000;
-     opacity: 0.66;
-   }
-
-}
-
-#project__pr3 {
-  background: #932057 url("../img/lbk-cryptosimple.jpg") 50% 50%;
+#project__cryptosimple--logo {
+  grid-area: project__cryptosimple--logo;
+  background: #932057 url("../img/lbk-cryptosimple.png") 50% 50%;
   background-size: cover;
+}
+
+#project__mechanization--site {
+  grid-area: project__mechanization--site;
+  background: #000000 url("../img/lbk-mechanization1.png") 50% -40% repeat-x;
+
+  @media (width >= $size-sm) {
+    background-position: 50% 0;
+  }
 
 }
 
-#project__pr4 {
+#project__alpenclub--layout {
+  grid-area: project__alpenclub--layout;
   background: #ffffff;
 
   .pr-title {
@@ -121,16 +159,13 @@
 
 }
 
-#project__pr5 {
-  background: #000000 url("../img/lbk-mechanization1.png") 50% -40% repeat-x;
-
-  @media (width >= $size-sm) {
-    background-position: 50% 0;
-  }
-
+#project__manteraresidence--layout {
+  grid-area: project__manteraresidence--layout;
+  background: #71878D;
 }
 
-#project__pr6 {
+#project__mechanization--mobapp {
+  grid-area: project__mechanization--mobapp;
   background: #1B1C1E url("../img/lbk-mechanization2.png") 50% -40% repeat-x;
 
   @media (width >= $size-sm) {
@@ -139,11 +174,7 @@
 
 }
 
-#project__pr7 {
-  background: #71878D;
-}
-
-#project__pr8 {
+#project__tursvodka--site {
   background-color: #005CAE;
 
   img {
@@ -152,7 +183,7 @@
 
 }
 
-#project__pr9 {
+#project__alati--site {
   background-color: #DAD3C1;
 
   img {
@@ -161,7 +192,7 @@
 
 }
 
-#project__pr10 {
+#project__kubele--site {
   background-color: #2D5492;
 
 
@@ -171,7 +202,7 @@
 
 }
 
-#project__pr11 {
+#project__mba--site {
   background-color: #A41000;
 
   img {
@@ -194,6 +225,10 @@
 
   @media (width >= $size-md) {
     font-size: 18px;
+  }
+
+  @media (height <= $size-md) {
+    font-size: 16px;
   }
 
 }

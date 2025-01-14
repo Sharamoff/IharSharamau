@@ -19,21 +19,23 @@
 }
 
 .project {
-  animation-duration: 1s;
+  animation-duration: 0.8s;
   animation-fill-mode: both;
 }
 
-#project__pr1   { animation-delay: 4.0s; };
-#project__pr2   { animation-delay: 4.0s; };
-#project__pr3   { animation-delay: 4.4s; };
-#project__pr4   { animation-delay: 4.8s; };
-#project__pr5   { animation-delay: 4.8s; };
-#project__pr6   { animation-delay: 5.2s; };
-#project__pr7   { animation-delay: 5.2s; };
-#project__pr8   { animation-delay: 5.8s; };
-#project__pr9   { animation-delay: 5.6s; };
-#project__pr10  { animation-delay: 5.6s; };
-#project__pr11  { animation-delay: 5.8s; };
+#project__gvinico--site             { animation-delay: 4.0s; };
+#project__gutewetter--site          { animation-delay: 4.4s; };
+#project__gutewetter--mobapp        { animation-delay: 4.5s; };
+#project__cryptosimple--logo        { animation-delay: 4.9s; };
+#project__mechanization--site       { animation-delay: 5.3s; };
+#project__alpenclub--layout         { animation-delay: 5.4s; };
+#project__manteraresidence--layout  { animation-delay: 5.5s; };
+#project__mechanization--mobapp     { animation-delay: 5.6s; };
+
+#project__tursvodka--site           { animation-delay: 6.0s; };
+#project__alati--site               { animation-delay: 5.8s; };
+#project__kubele--site              { animation-delay: 5.9s; };
+#project__mba--site                 { animation-delay: 6.1s; };
 
 
 .me-header {
