@@ -20,6 +20,10 @@
       font-size: 120px;
     }
 
+	  @media (height <= $size-lg) {
+		  margin-top: -62px;
+	  }
+
   }
 
   .me-content {
@@ -27,18 +31,19 @@
     margin-left: 70px;
     padding-right: 25px;
     font-size: 14px;
-    overflow-y: auto;
+    overflow: hidden;
     z-index: $z-index-content;
 
     @media (width >= $size-md) {
       margin-left: 85px;
       padding-right: 50px;
       font-size: 16px;
-      height: 65vh;
+      min-height: 70dvh;
     }
 
-    @media (height <= $size-sm) {
+    @media (height <= $size-lg) {
       height: auto;
+	    margin-left: 3px;
     }
 
   }
@@ -52,7 +57,7 @@
   .me-signature {
     max-width: 160px;
     height: auto;
-    margin: -20px 0 0 100px;
+    margin: -30px 0 0 72px;
   }
 
 }
