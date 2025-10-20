@@ -8,15 +8,20 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(5, 1fr) 0.5fr;
     gap: 0;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
     grid-auto-flow: row;
     grid-template-areas:
+    "project__q35--3danimations project__q35--3danimations"
     "project__gvinico--site project__gvinico--site"
     "project__gutewetter--site  project__gutewetter--mobapp"
-    "project__cryptosimple--logo project__cryptosimple--logo"
     "project__mechanization--site project__alpenclub--layout"
     "project__manteraresidence--layout project__mechanization--mobapp"
     "projectadd projectadd";
+  }
+
+  @media (height <= $size-sm) {
+    overflow: auto;
   }
 
 }
@@ -29,12 +34,12 @@
   text-decoration: none;
   color: $color-main;
   padding: 20px;
-  overflow: hidden;
   transition: 1s;
-  min-height: 120px;
+  min-height: 100px;
 
   @media (width >= $size-md) {
     min-height: auto;
+    overflow: hidden;
   }
 
   @media (height <= $size-md) {
@@ -103,6 +108,44 @@
 }
 
 
+
+#project__q35--3danimations {
+  grid-area: project__q35--3danimations;
+  background: #BBBBBB url("../img/lbk-q35.png") left 50%;
+  background-size: cover;
+  justify-content: flex-end;
+  padding: 0;
+  overflow: hidden;
+
+  @media (height <= $size-md) {
+    min-height: 120px;
+  }
+
+  img {
+    width: auto;
+    max-width: none;
+    height: 100%;
+    max-height: 140px;
+    object-fit: cover;
+
+    @media (width <= $size-sm) {
+      min-height: 140px;
+    }
+
+    @media (width >= $size-md) {
+      max-width: none;
+      min-height: auto;
+      max-height: none;
+    }
+
+  }
+
+  .pr-title {
+    color: #000000;
+    opacity: 0.66;
+  }
+
+}
 
 #project__gvinico--site {
   grid-area: project__gvinico--site;
@@ -195,15 +238,14 @@
 #project__kubele--site {
   background-color: #2D5492;
 
-
   img {
     max-width: 100px;
   }
 
 }
 
-#project__mba--site {
-  background-color: #A41000;
+#project__cs--logo {
+  background-color: #8D2028;
 
   img {
     max-width: 100px;
